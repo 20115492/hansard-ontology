@@ -46,7 +46,7 @@ http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard
 
 This repository is published using **GitHub Pages** and is accessible at:
 
-https://20115492.github.io/hansard/
+https://20115492.github.io/hansard-ontology/
 
 The published URL is also referenced within the ontology as the
 `documentURL` of the example `HansardDocument` individual.
