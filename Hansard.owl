@@ -1,0 +1,775 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#"
+     xml:base="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:hansard="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#belongsToMeeting -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#belongsToMeeting">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#hasSittingDay"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#SittingDay"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Meeting"/>
+        <rdfs:label>belongsToMeeting</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#belongsToSession -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#belongsToSession">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#hasMeeting"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Meeting"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#ParliamentSession"/>
+        <rdfs:label>belongsToSession</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#belongsToSitting -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#belongsToSitting">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#containsAgendaItem"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#AgendaItem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#SittingDay"/>
+        <rdfs:label>belongsToSitting</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#containsAgendaItem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#containsAgendaItem">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#SittingDay"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#AgendaItem"/>
+        <rdfs:label>containsAgendaItem</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#describesMeeting -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#describesMeeting">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#HansardDocument"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Meeting"/>
+        <rdfs:label>describesMeeting</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#describesSession -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#describesSession">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#HansardDocument"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#ParliamentSession"/>
+        <rdfs:label>describesSession</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#describesSitting -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#describesSitting">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#HansardDocument"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#SittingDay"/>
+        <rdfs:label>describesSitting</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#hasContribution -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#hasContribution">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#occursUnderAgendaItem"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#AgendaItem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#DebateContribution"/>
+        <rdfs:label>hasContribution</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#hasMeeting -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#hasMeeting">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#ParliamentSession"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Meeting"/>
+        <rdfs:label>hasMeeting</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#hasSittingDay -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#hasSittingDay">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Meeting"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#SittingDay"/>
+        <rdfs:label>hasSittingDay</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#introducedInAgendaItem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#introducedInAgendaItem">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#LegislativeItem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#AgendaItem"/>
+        <rdfs:comment>Anchors a legislative item to its agenda slot.</rdfs:comment>
+        <rdfs:label>introducedInAgendaItem</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#madeBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#madeBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#DebateContribution"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Person"/>
+        <rdfs:label>madeBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#mentionsBill -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#mentionsBill">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#DebateContribution"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Bill"/>
+        <rdfs:comment>Added realism property: links a contribution to a bill explicitly referenced in the speech.</rdfs:comment>
+        <rdfs:label>mentionsBill</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#occursUnderAgendaItem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#occursUnderAgendaItem">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#DebateContribution"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#AgendaItem"/>
+        <rdfs:label>occursUnderAgendaItem</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#presentedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#presentedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#LegislativeItem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Person"/>
+        <rdfs:label>presentedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#agendaOrder -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#agendaOrder">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#AgendaItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>agendaOrder</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#agendaTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#agendaTitle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#AgendaItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>agendaTitle</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#constituencyName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#constituencyName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#MemberOfParliament"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>constituencyName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#documentURL -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#documentURL">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#HansardDocument"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>Added realism property for live publication/discovery on the web.</rdfs:comment>
+        <rdfs:label>documentURL</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#hasEditionType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#hasEditionType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#HansardDocument"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>hasEditionType</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#hasISSN -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#hasISSN">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#HansardDocument"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>hasISSN</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#hasTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#hasTitle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#HansardDocument"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>hasTitle</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#itemNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#itemNumber">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#LegislativeItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>itemNumber</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#itemTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#itemTitle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#LegislativeItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>itemTitle</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#meetingLabel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#meetingLabel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Meeting"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>meetingLabel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#meetingNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#meetingNumber">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Meeting"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>meetingNumber</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#mpCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#mpCode">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#MemberOfParliament"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>mpCode</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#personName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#personName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>personName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#publishedOn -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#publishedOn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#HansardDocument"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:label>publishedOn</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#readingStage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#readingStage">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Bill"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>readingStage</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#sessionLabel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#sessionLabel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#ParliamentSession"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>sessionLabel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#sessionNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#sessionNumber">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#ParliamentSession"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>sessionNumber</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#sittingDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#sittingDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#SittingDay"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:label>sittingDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#sittingDayLabel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#sittingDayLabel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#SittingDay"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>sittingDayLabel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#speechOrder -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#speechOrder">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#DebateContribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>speechOrder</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#speechText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#speechText">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#DebateContribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>speechText</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#AgendaItem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#AgendaItem">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#belongsToSitting"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#SittingDay"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#DebateContribution"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#HansardDocument"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#LegislativeItem"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Meeting"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#ParliamentSession"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Person"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#SittingDay"/>
+        <rdfs:comment>Scheduled unit of parliamentary business.</rdfs:comment>
+        <rdfs:label>AgendaItem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Bill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Bill">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#LegislativeItem"/>
+        <rdfs:comment>A bill as a specialised legislative item.</rdfs:comment>
+        <rdfs:label>Bill</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#DebateContribution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#DebateContribution">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#madeBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#occursUnderAgendaItem"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#AgendaItem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#HansardDocument"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#LegislativeItem"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Meeting"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#ParliamentSession"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Person"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#SittingDay"/>
+        <rdfs:comment>A speech or intervention in debate.</rdfs:comment>
+        <rdfs:label>DebateContribution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#HansardDocument -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#HansardDocument">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#describesMeeting"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Meeting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#describesSession"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#ParliamentSession"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#describesSitting"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#SittingDay"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#hasISSN"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#LegislativeItem"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Meeting"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#ParliamentSession"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Person"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#SittingDay"/>
+        <rdfs:comment>Published Hansard record as a documentary artefact.</rdfs:comment>
+        <rdfs:label>HansardDocument</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#LegislativeItem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#LegislativeItem">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#introducedInAgendaItem"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#AgendaItem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Meeting"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#ParliamentSession"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Person"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#SittingDay"/>
+        <rdfs:comment>Formal business item introduced under an agenda item.</rdfs:comment>
+        <rdfs:label>LegislativeItem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Meeting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Meeting">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#belongsToSession"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#ParliamentSession"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#ParliamentSession"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Person"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#SittingDay"/>
+        <rdfs:comment>A meeting within a parliamentary session.</rdfs:comment>
+        <rdfs:label>Meeting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#MemberOfParliament -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#MemberOfParliament">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#mpCode"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#constituencyName"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A parliamentarian with constituency metadata.</rdfs:comment>
+        <rdfs:label>MemberOfParliament</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#ParliamentSession -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#ParliamentSession">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Person"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#SittingDay"/>
+        <rdfs:comment>Formal parliamentary session.</rdfs:comment>
+        <rdfs:label>ParliamentSession</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Person">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#SittingDay"/>
+        <rdfs:comment>A human actor in the Hansard setting.</rdfs:comment>
+        <rdfs:label>Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#SittingDay -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#SittingDay">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#belongsToMeeting"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Meeting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#sittingDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A dated sitting day that belongs to one meeting.</rdfs:comment>
+        <rdfs:label>SittingDay</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Agenda_NationalBudget -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Agenda_NationalBudget">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#AgendaItem"/>
+        <hansard:belongsToSitting rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Sitting_2026_03_12"/>
+        <hansard:agendaOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hansard:agendaOrder>
+        <hansard:agendaTitle>Presentation of the National Budget</hansard:agendaTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Bill_FiscalResponsibility2026 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Bill_FiscalResponsibility2026">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Bill"/>
+        <hansard:introducedInAgendaItem rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Agenda_NationalBudget"/>
+        <hansard:presentedBy rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#MP_Grace_Banda"/>
+        <hansard:itemNumber>Bill No. 4 of 2026</hansard:itemNumber>
+        <hansard:itemTitle>Fiscal Responsibility Bill, 2026</hansard:itemTitle>
+        <hansard:readingStage>First Reading</hansard:readingStage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Contribution_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Contribution_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#DebateContribution"/>
+        <hansard:madeBy rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#MP_Grace_Banda"/>
+        <hansard:mentionsBill rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Bill_FiscalResponsibility2026"/>
+        <hansard:occursUnderAgendaItem rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Agenda_NationalBudget"/>
+        <hansard:speechOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hansard:speechOrder>
+        <hansard:speechText>I beg to present the Fiscal Responsibility Bill, 2026 for First Reading.</hansard:speechText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Contribution_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Contribution_002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#DebateContribution"/>
+        <hansard:madeBy rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#MP_Samuel_Phiri"/>
+        <hansard:mentionsBill rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Bill_FiscalResponsibility2026"/>
+        <hansard:occursUnderAgendaItem rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Agenda_NationalBudget"/>
+        <hansard:speechOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hansard:speechOrder>
+        <hansard:speechText>The House should note the accountability safeguards proposed in the bill.</hansard:speechText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Hansard_2026_03_12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Hansard_2026_03_12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#HansardDocument"/>
+        <hansard:describesMeeting rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Meeting_51_02"/>
+        <hansard:describesSession rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Session_51"/>
+        <hansard:describesSitting rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Sitting_2026_03_12"/>
+        <hansard:documentURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://YOUR-USERNAME.github.io/hansard-minimal/</hansard:documentURL>
+        <hansard:hasEditionType>Unrevised Edition</hansard:hasEditionType>
+        <hansard:hasISSN>2225-5273</hansard:hasISSN>
+        <hansard:hasTitle>Daily Debates (Hansard) - Minimal Model Example</hansard:hasTitle>
+        <hansard:publishedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-13</hansard:publishedOn>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#MP_Grace_Banda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#MP_Grace_Banda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#MemberOfParliament"/>
+        <hansard:constituencyName>Lilongwe Central</hansard:constituencyName>
+        <hansard:mpCode>MP-051-014</hansard:mpCode>
+        <hansard:personName>Hon. Grace Banda</hansard:personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#MP_Samuel_Phiri -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#MP_Samuel_Phiri">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#MemberOfParliament"/>
+        <hansard:constituencyName>Mzuzu South</hansard:constituencyName>
+        <hansard:mpCode>MP-051-027</hansard:mpCode>
+        <hansard:personName>Hon. Samuel Phiri</hansard:personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Meeting_51_02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Meeting_51_02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Meeting"/>
+        <hansard:belongsToSession rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Session_51"/>
+        <hansard:meetingLabel>Second Meeting</hansard:meetingLabel>
+        <hansard:meetingNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hansard:meetingNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Session_51 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Session_51">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#ParliamentSession"/>
+        <hansard:sessionLabel>Fifty-First Session</hansard:sessionLabel>
+        <hansard:sessionNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">51</hansard:sessionNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Sitting_2026_03_12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Sitting_2026_03_12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#SittingDay"/>
+        <hansard:belongsToMeeting rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Meeting_51_02"/>
+        <hansard:sittingDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-12</hansard:sittingDate>
+        <hansard:sittingDayLabel>Third Sitting Day</hansard:sittingDayLabel>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
