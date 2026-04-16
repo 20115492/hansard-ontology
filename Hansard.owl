@@ -654,9 +654,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Agenda_NationalBudget">
         <rdf:type rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#AgendaItem"/>
-        <hansard:belongsToSitting rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Sitting_2026_03_12"/>
-        <hansard:agendaOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hansard:agendaOrder>
-        <hansard:agendaTitle>Presentation of the National Budget</hansard:agendaTitle>
+        <belongsToSitting rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Sitting_2026_03_12"/>
+        <agendaOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</agendaOrder>
+        <agendaTitle>Presentation of the National Budget</agendaTitle>
     </owl:NamedIndividual>
     
 
@@ -665,11 +665,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Bill_FiscalResponsibility2026">
         <rdf:type rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Bill"/>
-        <hansard:introducedInAgendaItem rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Agenda_NationalBudget"/>
-        <hansard:presentedBy rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#MP_Grace_Banda"/>
-        <hansard:itemNumber>Bill No. 4 of 2026</hansard:itemNumber>
-        <hansard:itemTitle>Fiscal Responsibility Bill, 2026</hansard:itemTitle>
-        <hansard:readingStage>First Reading</hansard:readingStage>
+        <introducedInAgendaItem rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Agenda_NationalBudget"/>
+        <presentedBy rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#MP_Grace_Banda"/>
+        <itemNumber>Bill No. 4 of 2026</itemNumber>
+        <itemTitle>Fiscal Responsibility Bill, 2026</itemTitle>
+        <readingStage>First Reading</readingStage>
     </owl:NamedIndividual>
     
 
@@ -678,11 +678,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Contribution_001">
         <rdf:type rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#DebateContribution"/>
-        <hansard:madeBy rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#MP_Grace_Banda"/>
-        <hansard:mentionsBill rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Bill_FiscalResponsibility2026"/>
-        <hansard:occursUnderAgendaItem rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Agenda_NationalBudget"/>
-        <hansard:speechOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hansard:speechOrder>
-        <hansard:speechText>I beg to present the Fiscal Responsibility Bill, 2026 for First Reading.</hansard:speechText>
+        <madeBy rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#MP_Grace_Banda"/>
+        <mentionsBill rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Bill_FiscalResponsibility2026"/>
+        <occursUnderAgendaItem rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Agenda_NationalBudget"/>
+        <speechOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</speechOrder>
+        <speechText>I beg to present the Fiscal Responsibility Bill, 2026 for First Reading.</speechText>
     </owl:NamedIndividual>
     
 
@@ -691,11 +691,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Contribution_002">
         <rdf:type rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#DebateContribution"/>
-        <hansard:madeBy rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#MP_Samuel_Phiri"/>
-        <hansard:mentionsBill rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Bill_FiscalResponsibility2026"/>
-        <hansard:occursUnderAgendaItem rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Agenda_NationalBudget"/>
-        <hansard:speechOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hansard:speechOrder>
-        <hansard:speechText>The House should note the accountability safeguards proposed in the bill.</hansard:speechText>
+        <madeBy rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#MP_Samuel_Phiri"/>
+        <mentionsBill rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Bill_FiscalResponsibility2026"/>
+        <occursUnderAgendaItem rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Agenda_NationalBudget"/>
+        <speechOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</speechOrder>
+        <speechText>The House should note the accountability safeguards proposed in the bill.</speechText>
     </owl:NamedIndividual>
     
 
@@ -704,14 +704,14 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Hansard_2026_03_12">
         <rdf:type rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#HansardDocument"/>
-        <hansard:describesMeeting rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Meeting_51_02"/>
-        <hansard:describesSession rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Session_51"/>
-        <hansard:describesSitting rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Sitting_2026_03_12"/>
-        <hansard:documentURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://YOUR-USERNAME.github.io/hansard-minimal/</hansard:documentURL>
-        <hansard:hasEditionType>Unrevised Edition</hansard:hasEditionType>
-        <hansard:hasISSN>2225-5273</hansard:hasISSN>
-        <hansard:hasTitle>Daily Debates (Hansard) - Minimal Model Example</hansard:hasTitle>
-        <hansard:publishedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-13</hansard:publishedOn>
+        <describesMeeting rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Meeting_51_02"/>
+        <describesSession rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Session_51"/>
+        <describesSitting rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Sitting_2026_03_12"/>
+        <documentURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://20115492.github.io/hansard-minimal/</documentURL>
+        <hasEditionType>Unrevised Edition</hasEditionType>
+        <hasISSN>2225-5273</hasISSN>
+        <hasTitle>Daily Debates (Hansard) - Minimal Model Example</hasTitle>
+        <publishedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-13</publishedOn>
     </owl:NamedIndividual>
     
 
@@ -720,9 +720,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#MP_Grace_Banda">
         <rdf:type rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#MemberOfParliament"/>
-        <hansard:constituencyName>Lilongwe Central</hansard:constituencyName>
-        <hansard:mpCode>MP-051-014</hansard:mpCode>
-        <hansard:personName>Hon. Grace Banda</hansard:personName>
+        <constituencyName>Lilongwe Central</constituencyName>
+        <mpCode>MP-051-014</mpCode>
+        <personName>Hon. Grace Banda</personName>
     </owl:NamedIndividual>
     
 
@@ -731,9 +731,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#MP_Samuel_Phiri">
         <rdf:type rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#MemberOfParliament"/>
-        <hansard:constituencyName>Mzuzu South</hansard:constituencyName>
-        <hansard:mpCode>MP-051-027</hansard:mpCode>
-        <hansard:personName>Hon. Samuel Phiri</hansard:personName>
+        <constituencyName>Mzuzu South</constituencyName>
+        <mpCode>MP-051-027</mpCode>
+        <personName>Hon. Samuel Phiri</personName>
     </owl:NamedIndividual>
     
 
@@ -742,9 +742,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Meeting_51_02">
         <rdf:type rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Meeting"/>
-        <hansard:belongsToSession rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Session_51"/>
-        <hansard:meetingLabel>Second Meeting</hansard:meetingLabel>
-        <hansard:meetingNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hansard:meetingNumber>
+        <belongsToSession rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Session_51"/>
+        <meetingLabel>Second Meeting</meetingLabel>
+        <meetingNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</meetingNumber>
     </owl:NamedIndividual>
     
 
@@ -753,8 +753,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Session_51">
         <rdf:type rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#ParliamentSession"/>
-        <hansard:sessionLabel>Fifty-First Session</hansard:sessionLabel>
-        <hansard:sessionNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">51</hansard:sessionNumber>
+        <sessionLabel>Fifty-First Session</sessionLabel>
+        <sessionNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">51</sessionNumber>
     </owl:NamedIndividual>
     
 
@@ -763,9 +763,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Sitting_2026_03_12">
         <rdf:type rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#SittingDay"/>
-        <hansard:belongsToMeeting rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Meeting_51_02"/>
-        <hansard:sittingDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-12</hansard:sittingDate>
-        <hansard:sittingDayLabel>Third Sitting Day</hansard:sittingDayLabel>
+        <belongsToMeeting rdf:resource="http://www.semanticweb.org/gmasamba/ontologies/2026/4/hansard#Meeting_51_02"/>
+        <sittingDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-12</sittingDate>
+        <sittingDayLabel>Third Sitting Day</sittingDayLabel>
     </owl:NamedIndividual>
 </rdf:RDF>
 
